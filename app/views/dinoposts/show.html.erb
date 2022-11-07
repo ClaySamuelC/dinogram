@@ -1,6 +1,15 @@
 <h1>
   <%= @dinopost.title %>
 </h1>
+
 <div>
   <%= @dinopost.body %>
 </div>
+
+<ul>
+  <li><%= link_to "Edit", edit_dinopost_path(@dinopost) %></li>
+  <li><%= link_to "Destroy", dinopost_path(@dinopost), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></li>
+</ul>
