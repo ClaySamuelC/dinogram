@@ -1,1 +1,10 @@
 <h1>Dinopost Feed!</h1>
+
+<ul>
+  <% @dinoposts.each do |dinopost| %>
+    <li>
+      <%= dinopost.title %>
+      <%= dinopost.body %>
+    </li>
+  <% end %>
+</ul>
