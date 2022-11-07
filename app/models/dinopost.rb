@@ -1,0 +1,2 @@
+class Dinopost < ApplicationRecord
+end
