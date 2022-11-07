@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root "dinopost#index"
+  root "dinoposts#index"
 
-  get '/dinopost', to: "dinopost#index"
+  get '/dinoposts', to: "dinoposts#index"
 end
