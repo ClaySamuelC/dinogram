@@ -3,8 +3,7 @@
 <ul>
   <% @dinoposts.each do |dinopost| %>
     <li>
-      <%= dinopost.title %>
-      <%= dinopost.body %>
+      <%= link_to dinopost.title, dinopost %>
     </li>
   <% end %>
 </ul>
