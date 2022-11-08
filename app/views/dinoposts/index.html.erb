@@ -1,5 +1,7 @@
 <h1>Dinopost Feed!</h1>
 
+Dinogram has <%= Dinopost.public_count %> Dinoposts and counting!
+
 <ul>
   <% @dinoposts.each do |dinopost| %>
     <% unless dinopost.archived? %>
