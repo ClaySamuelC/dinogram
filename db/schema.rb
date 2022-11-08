@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_07_075156) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_08_221428) do
   create_table "comments", force: :cascade do |t|
     t.string "commenter"
     t.text "body"
     t.integer "dinopost_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "status"
     t.index ["dinopost_id"], name: "index_comments_on_dinopost_id"
   end
 
@@ -25,6 +26,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_07_075156) do
     t.text "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "status"
   end
 
   add_foreign_key "comments", "dinoposts"
