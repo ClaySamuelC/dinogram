@@ -2,9 +2,11 @@
 
 <ul>
   <% @dinoposts.each do |dinopost| %>
-    <li>
-      <%= link_to dinopost.title, dinopost %>
-    </li>
+    <% unless dinopost.archived? %>
+      <li>
+        <%= link_to dinopost.title, dinopost %>
+      </li>
+   <% end %>
   <% end %>
 </ul>
 

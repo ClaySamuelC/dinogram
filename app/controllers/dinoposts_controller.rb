@@ -44,6 +44,6 @@ class DinopostsController < ApplicationController
 
   private
     def dinopost_params
-      params.require(:dinopost).permit(:title, :body)
+      params.require(:dinopost).permit(:title, :body, :status)
     end
 end
